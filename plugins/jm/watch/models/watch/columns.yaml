@@ -1,0 +1,19 @@
+columns:
+    watch_name:
+        label: 'Product Name'
+        type: text
+        searchable: true
+        sortable: true
+    watch_description:
+        label: Description
+        type: text
+        searchable: true
+    created_at:
+        label: 'Created Date'
+        type: datetime
+        searchable: false
+        sortable: true
+    updated_at:
+        label: 'Updated Date'
+        type: datetime
+        sortable: true

@@ -1,0 +1,40 @@
+fields:
+    watch_name:
+        label: 'Product Name'
+        span: full
+        placeholder: Name
+        required: 1
+        type: text
+    watch_description:
+        label: Description
+        size: small
+        span: full
+        required: 0
+        type: textarea
+    watchPic:
+        label: Upload
+        mode: image
+        imageWidth: '200'
+        imageHeight: '100'
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: auto
+        type: fileupload
+    featured:
+        label: 'Featured Product'
+        span: auto
+        default: 0
+        disabled: 0
+        type: checkbox
+    watchPic2:
+        label: 'Slider Images'
+        mode: image
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: auto
+        hidden: 0
+        type: fileupload

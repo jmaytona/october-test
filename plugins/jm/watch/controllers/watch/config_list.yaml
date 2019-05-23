@@ -1,0 +1,12 @@
+title: Watch
+modelClass: Jm\Watch\Models\Watch
+list: $/jm/watch/models/watch/columns.yaml
+recordUrl: 'jm/watch/watch/update/:id'
+noRecordsMessage: 'backend::lang.list.no_records'
+recordsPerPage: 20
+showSetup: true
+showCheckboxes: true
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'

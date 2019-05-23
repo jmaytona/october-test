@@ -1,0 +1,11 @@
+name: Watch
+modelClass: Jm\Watch\Models\Watch
+form: $/jm/watch/models/watch/fields.yaml
+defaultRedirect: jm/watch/watch
+create:
+    redirect: 'jm/watch/watch/update/:id'
+    redirectClose: jm/watch/watch
+update:
+    redirect: jm/watch/watch
+    redirectClose: jm/watch/watch
+preview: {  }

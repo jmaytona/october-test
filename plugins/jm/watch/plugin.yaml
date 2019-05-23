@@ -1,0 +1,11 @@
+plugin:
+    name: 'jm.watch::lang.plugin.name'
+    description: 'jm.watch::lang.plugin.description'
+    author: jm
+    icon: oc-icon-pagelines
+    homepage: ''
+navigation:
+    main-menu-item:
+        label: Watch
+        url: jm/watch/watch
+        icon: icon-adjust

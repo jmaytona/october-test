@@ -1,0 +1,4 @@
+title: Watch
+modelClass: Jm\Watch\Models\Watch
+toolbar:
+    buttons: reorder_toolbar
