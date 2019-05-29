@@ -1,0 +1,6 @@
+plugin:
+    name: 'jm.frontindex::lang.plugin.name'
+    description: 'jm.frontindex::lang.plugin.description'
+    author: jm
+    icon: oc-icon-desktop
+    homepage: ''

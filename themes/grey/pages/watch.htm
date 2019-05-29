@@ -1,4 +1,4 @@
-title = "watch"
+title = "Watch"
 url = "/watch"
 layout = "default"
 is_hidden = 0
@@ -9,8 +9,9 @@ scope = "-"
 scopeValue = "{{ :scope }}"
 displayColumn = "watch_name"
 noRecordsMessage = "No records found"
-detailsPage = "-"
-detailsUrlParameter = "id"
+detailsPage = "watch-single"
+detailsKeyColumn = "slug"
+detailsUrlParameter = "slug"
 pageNumber = "{{ :page }}"
 ==
 {% set records = builderList.records %}
@@ -20,41 +21,45 @@ pageNumber = "{{ :page }}"
 {% set detailsKeyColumn = builderList.detailsKeyColumn %}
 {% set detailsUrlParameter = builderList.detailsUrlParameter %}
 
-<ul class="record-list">
+<section id="about" class="about-section text-center">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+        <h2 class="text-white mb-4">Products</h2>
+        <p class="text-white-50">The world’s first GPS solar watch. By connecting to the GPS network, the Astron adjusts
+          at the touch of a button to your time zone and, by taking all the energy it
+          needs from light alone, never needs a battery change.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="projects" class="projects-section bg-light">
+  <div class="container">
+    
     {% for record in records %}
-        <li>
-            {# Use spaceless tag to remove spaces inside the A tag. #}
-            {% spaceless %}
-                {% if detailsPage %}
-                    <a href="{{ detailsPage|page({ (detailsUrlParameter): attribute(record, detailsKeyColumn) }) }}">
-                {% endif %}
 
-                {{ attribute(record, displayColumn) }}
+    <!-- Include an referenced anchor tag if available -->
+    {% if detailsPage %}
+      <a href="{{ detailsPage|page( {(detailsUrlParameter): attribute(record, detailsKeyColumn)} ) }}">
+    {% endif %}
+    <div class="row align-items-center no-gutters mb-4 mb-lg-5" data-aos="zoom-in-up" data-aos-duration="1500">
+      <div class="col-xl-8 col-lg-7">
+        <img class="img-fluid mb-3 mb-lg-0" src="{{ record.watchPic.path }}" alt="">
+      </div>
+      <div class="col-xl-4 col-lg-5">
+        <div class="featured-text text-center text-lg-left">
+          <h4>{{ record.watch_name }}</h4>
+          <p class="text-black-50 mb-0">{{ record.watch_description }}</p>
+        </div>
+      </div>
+      
+    </div>
 
-                {% if detailsPage %}
-                    </a>
-                {% endif %}
-            {% endspaceless %}
-        </li>
-    {% else %}
-        <li class="no-data">{{ noRecordsMessage }}</li>
+    {% if detailsPage %}
+        </a>
+    {% endif %}
+
     {% endfor %}
-</ul>
-
-{% if records.lastPage > 1 %}
-    <ul class="pagination">
-        {% if records.currentPage > 1 %}
-            <li><a href="{{ this.page.baseFileName|page({ (pageParam): (records.currentPage-1) }) }}">&larr; Prev</a></li>
-        {% endif %}
-
-        {% for page in 1..records.lastPage %}
-            <li class="{{ records.currentPage == page ? 'active' : null }}">
-                <a href="{{ this.page.baseFileName|page({ (pageParam): page }) }}">{{ page }}</a>
-            </li>
-        {% endfor %}
-
-        {% if records.lastPage > records.currentPage %}
-            <li><a href="{{ this.page.baseFileName|page({ (pageParam): (records.currentPage+1) }) }}">Next &rarr;</a></li>
-        {% endif %}
-    </ul>
-{% endif %}
+  </div>
+</section>

@@ -1,4 +1,4 @@
-1558622301a:1:{s:11:"default.htm";a:6:{s:8:"fileName";s:11:"default.htm";s:7:"content";s:1564:"description = "Default layout"
+1559028253a:1:{s:11:"default.htm";a:6:{s:8:"fileName";s:11:"default.htm";s:7:"content";s:1773:"description = "Default layout"
 ==
 
 <!DOCTYPE html>
@@ -24,6 +24,10 @@
   <!-- Custom styles for this template -->
   <link href="{{ 'assets/css/grayscale.min.css'|theme }}" rel="stylesheet">
 
+  <!-- ANIMATION -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  
+
 </head>
 
 <body id="page-top">
@@ -48,12 +52,17 @@
 
   <!-- Custom scripts for this template -->
   <script src="{{ 'assets/js/grayscale.min.js'|theme }}"></script>
+  
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+      AOS.init();
+  </script>
 
 </body>
 
 </html>
 
-";s:5:"mtime";i:1558588370;s:6:"markup";s:1527:"<!DOCTYPE html>
+";s:5:"mtime";i:1558947491;s:6:"markup";s:1736:"<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -76,6 +85,10 @@
   <!-- Custom styles for this template -->
   <link href="{{ 'assets/css/grayscale.min.css'|theme }}" rel="stylesheet">
 
+  <!-- ANIMATION -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  
+
 </head>
 
 <body id="page-top">
@@ -100,6 +113,11 @@
 
   <!-- Custom scripts for this template -->
   <script src="{{ 'assets/js/grayscale.min.js'|theme }}"></script>
+  
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+      AOS.init();
+  </script>
 
 </body>
 

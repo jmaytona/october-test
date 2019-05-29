@@ -1,0 +1,69 @@
+title = "Watch-Single"
+url = "/product/:slug?"
+layout = "default"
+is_hidden = 0
+
+[builderDetails]
+modelClass = "Jm\Watch\Models\Watch"
+identifierValue = "{{ :slug }}"
+modelKeyColumn = "slug"
+displayColumn = "watch_name"
+notFoundMessage = "Record not found"
+
+==
+{% set record = builderDetails.record %}
+{% set displayColumn = builderDetails.displayColumn %}
+{% set notFoundMessage = builderDetails.notFoundMessage %}
+{% set counter = 1 %}
+<section class="about-section text-center">
+    <div class="container">
+{% if record.featured == 1 %}
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                            <ol class="carousel-indicators">
+                              <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                              <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                              <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                            </ol>
+                            <div class="carousel-inner">
+                                {% for image in record.watchPic2 %}
+                                {% if counter == 1 %}
+                                <div class="carousel-item active">
+                                {% else %} 
+                                <div class="carousel-item ">
+                                {% endif %}
+                                {% set counter = counter + 1 %}
+                                <img class="d-block w-100" src="{{ image.path }}" alt="First slide">
+                              </div>
+                                {% endfor %}
+                            </div>
+                            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                              <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                              <span class="sr-only">Next</span>
+                            </a>
+                          </div>
+              <h2 class="text-white mb-4">{{record.watch_name}}</h2>
+              <p class="text-white-50">{{record.watch_description}}</p>
+            </div>
+        </div>
+        <div data-aos="zoom-in-up" data-aos-duration="2000">
+            <img src="{{ record.watchPic.path }}" class="img-fluid" alt="" >
+        </div>
+{% else %}
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+              <h2 class="text-white mb-4">{{record.watch_name}}</h2>
+              <p class="text-white-50">{{record.watch_description}}</p>
+            </div>
+        </div>
+        <div data-aos="zoom-in-up" data-aos-duration="2000">
+            <img src="{{ record.watchPic.path }}" class="img-fluid" alt="" >
+        </div>
+{% endif %}
+    </div>
+</section>

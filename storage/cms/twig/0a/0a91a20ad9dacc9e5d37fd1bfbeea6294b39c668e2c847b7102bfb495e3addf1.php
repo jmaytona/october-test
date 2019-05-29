@@ -64,55 +64,64 @@ class __TwigTemplate_14f90332b81bd5b47ea033611762961157115642d51da838d287cd24cfc
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/css/grayscale.min.css");
         echo "\" rel=\"stylesheet\">
 
+  <!-- ANIMATION -->
+  <link href=\"https://unpkg.com/aos@2.3.1/dist/aos.css\" rel=\"stylesheet\">
+  
+
 </head>
 
 <body id=\"page-top\">
 
   <!-- Navigation -->
   ";
-        // line 29
+        // line 33
         $context['__cms_partial_params'] = [];
         echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction("nav"        , $context['__cms_partial_params']        , true        );
         unset($context['__cms_partial_params']);
-        // line 30
+        // line 34
         echo "
   <!-- Content -->
   <section id=\"layout-content\">
     ";
-        // line 33
+        // line 37
         echo $this->env->getExtension('Cms\Twig\Extension')->pageFunction();
-        // line 34
+        // line 38
         echo "  </section>
 
   <!-- Footer -->
   ";
-        // line 37
+        // line 41
         $context['__cms_partial_params'] = [];
         echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction("footer"        , $context['__cms_partial_params']        , true        );
         unset($context['__cms_partial_params']);
-        // line 38
+        // line 42
         echo "
   <!-- Bootstrap core JavaScript -->
   <script src=\"";
-        // line 40
+        // line 44
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/vendor/jquery/jquery.min.js");
         echo "\"></script>
   <script src=\"";
-        // line 41
+        // line 45
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/vendor/bootstrap/js/bootstrap.bundle.min.js");
         echo "\"></script>
 
   <!-- Plugin JavaScript -->
   <script src=\"";
-        // line 44
+        // line 48
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/vendor/jquery-easing/jquery.easing.min.js");
         echo "\"></script>
 
   <!-- Custom scripts for this template -->
   <script src=\"";
-        // line 47
+        // line 51
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/js/grayscale.min.js");
         echo "\"></script>
+  
+  <script src=\"https://unpkg.com/aos@2.3.1/dist/aos.js\"></script>
+  <script>
+      AOS.init();
+  </script>
 
 </body>
 
@@ -131,7 +140,7 @@ class __TwigTemplate_14f90332b81bd5b47ea033611762961157115642d51da838d287cd24cfc
 
     public function getDebugInfo()
     {
-        return array (  114 => 47,  108 => 44,  102 => 41,  98 => 40,  94 => 38,  90 => 37,  85 => 34,  83 => 33,  78 => 30,  74 => 29,  64 => 22,  56 => 17,  50 => 14,  35 => 1,);
+        return array (  118 => 51,  112 => 48,  106 => 45,  102 => 44,  98 => 42,  94 => 41,  89 => 38,  87 => 37,  82 => 34,  78 => 33,  64 => 22,  56 => 17,  50 => 14,  35 => 1,);
     }
 
     public function getSourceContext()
@@ -159,6 +168,10 @@ class __TwigTemplate_14f90332b81bd5b47ea033611762961157115642d51da838d287cd24cfc
   <!-- Custom styles for this template -->
   <link href=\"{{ 'assets/css/grayscale.min.css'|theme }}\" rel=\"stylesheet\">
 
+  <!-- ANIMATION -->
+  <link href=\"https://unpkg.com/aos@2.3.1/dist/aos.css\" rel=\"stylesheet\">
+  
+
 </head>
 
 <body id=\"page-top\">
@@ -183,6 +196,11 @@ class __TwigTemplate_14f90332b81bd5b47ea033611762961157115642d51da838d287cd24cfc
 
   <!-- Custom scripts for this template -->
   <script src=\"{{ 'assets/js/grayscale.min.js'|theme }}\"></script>
+  
+  <script src=\"https://unpkg.com/aos@2.3.1/dist/aos.js\"></script>
+  <script>
+      AOS.init();
+  </script>
 
 </body>
 

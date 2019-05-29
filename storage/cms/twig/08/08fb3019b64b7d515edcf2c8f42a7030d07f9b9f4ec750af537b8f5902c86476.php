@@ -45,115 +45,79 @@ class __TwigTemplate_18b97e0cc818bbc3c41cb48bae0f172d3b07fbd4624d8f03a1ba9f2a307
         $context["detailsUrlParameter"] = twig_get_attribute($this->env, $this->source, ($context["builderList"] ?? null), "detailsUrlParameter", [], "any", false, false, false, 6);
         // line 7
         echo "
-<ul class=\"record-list\">
+<section id=\"about\" class=\"about-section text-center\">
+  <div class=\"container\">
+    <div class=\"row\">
+      <div class=\"col-lg-8 mx-auto\">
+        <h2 class=\"text-white mb-4\">Products</h2>
+        <p class=\"text-white-50\">The world’s first GPS solar watch. By connecting to the GPS network, the Astron adjusts
+          at the touch of a button to your time zone and, by taking all the energy it
+          needs from light alone, never needs a battery change.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id=\"projects\" class=\"projects-section bg-light\">
+  <div class=\"container\">
+    
     ";
-        // line 9
+        // line 24
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable(($context["records"] ?? null));
-        $context['_iterated'] = false;
         foreach ($context['_seq'] as $context["_key"] => $context["record"]) {
-            // line 10
-            echo "        <li>
-            ";
-            // line 12
-            echo "            ";
-            ob_start(function () { return ''; });
-            // line 13
-            echo "                ";
-            if (($context["detailsPage"] ?? null)) {
-                // line 14
-                echo "                    <a href=\"";
-                echo $this->extensions['Cms\Twig\Extension']->pageFilter(($context["detailsPage"] ?? null), [($context["detailsUrlParameter"] ?? null) => twig_get_attribute($this->env, $this->source, $context["record"], ($context["detailsKeyColumn"] ?? null), [], "any", false, false, false, 14)]);
-                echo "\">
-                ";
-            }
-            // line 16
-            echo "
-                ";
-            // line 17
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["record"], ($context["displayColumn"] ?? null), [], "any", false, false, false, 17), "html", null, true);
-            echo "
-
-                ";
-            // line 19
-            if (($context["detailsPage"] ?? null)) {
-                // line 20
-                echo "                    </a>
-                ";
-            }
-            // line 22
-            echo "            ";
-            echo trim(preg_replace('/>\s+</', '><', ob_get_clean()));
-            // line 23
-            echo "        </li>
-    ";
-            $context['_iterated'] = true;
-        }
-        if (!$context['_iterated']) {
             // line 25
-            echo "        <li class=\"no-data\">";
-            echo twig_escape_filter($this->env, ($context["noRecordsMessage"] ?? null), "html", null, true);
-            echo "</li>
+            echo "
+    <!-- Include an referenced anchor tag if available -->
+    ";
+            // line 27
+            if (($context["detailsPage"] ?? null)) {
+                // line 28
+                echo "      <a href=\"";
+                echo $this->extensions['Cms\Twig\Extension']->pageFilter(($context["detailsPage"] ?? null), [($context["detailsUrlParameter"] ?? null) => twig_get_attribute($this->env, $this->source, $context["record"], ($context["detailsKeyColumn"] ?? null), [], "any", false, false, false, 28)]);
+                echo "\">
+    ";
+            }
+            // line 30
+            echo "    <div class=\"row align-items-center no-gutters mb-4 mb-lg-5\" data-aos=\"zoom-in-up\" data-aos-duration=\"1500\">
+      <div class=\"col-xl-8 col-lg-7\">
+        <img class=\"img-fluid mb-3 mb-lg-0\" src=\"";
+            // line 32
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["record"], "watchPic", [], "any", false, false, false, 32), "path", [], "any", false, false, false, 32), "html", null, true);
+            echo "\" alt=\"\">
+      </div>
+      <div class=\"col-xl-4 col-lg-5\">
+        <div class=\"featured-text text-center text-lg-left\">
+          <h4>";
+            // line 36
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["record"], "watch_name", [], "any", false, false, false, 36), "html", null, true);
+            echo "</h4>
+          <p class=\"text-black-50 mb-0\">";
+            // line 37
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["record"], "watch_description", [], "any", false, false, false, 37), "html", null, true);
+            echo "</p>
+        </div>
+      </div>
+      
+    </div>
+
+    ";
+            // line 43
+            if (($context["detailsPage"] ?? null)) {
+                // line 44
+                echo "        </a>
+    ";
+            }
+            // line 46
+            echo "
     ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['record'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 27
-        echo "</ul>
-
-";
-        // line 29
-        if ((twig_get_attribute($this->env, $this->source, ($context["records"] ?? null), "lastPage", [], "any", false, false, false, 29) > 1)) {
-            // line 30
-            echo "    <ul class=\"pagination\">
-        ";
-            // line 31
-            if ((twig_get_attribute($this->env, $this->source, ($context["records"] ?? null), "currentPage", [], "any", false, false, false, 31) > 1)) {
-                // line 32
-                echo "            <li><a href=\"";
-                echo $this->extensions['Cms\Twig\Extension']->pageFilter(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["this"] ?? null), "page", [], "any", false, false, false, 32), "baseFileName", [], "any", false, false, false, 32), [($context["pageParam"] ?? null) => (twig_get_attribute($this->env, $this->source, ($context["records"] ?? null), "currentPage", [], "any", false, false, false, 32) - 1)]);
-                echo "\">&larr; Prev</a></li>
-        ";
-            }
-            // line 34
-            echo "
-        ";
-            // line 35
-            $context['_parent'] = $context;
-            $context['_seq'] = twig_ensure_traversable(range(1, twig_get_attribute($this->env, $this->source, ($context["records"] ?? null), "lastPage", [], "any", false, false, false, 35)));
-            foreach ($context['_seq'] as $context["_key"] => $context["page"]) {
-                // line 36
-                echo "            <li class=\"";
-                echo (((twig_get_attribute($this->env, $this->source, ($context["records"] ?? null), "currentPage", [], "any", false, false, false, 36) == $context["page"])) ? ("active") : (null));
-                echo "\">
-                <a href=\"";
-                // line 37
-                echo $this->extensions['Cms\Twig\Extension']->pageFilter(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["this"] ?? null), "page", [], "any", false, false, false, 37), "baseFileName", [], "any", false, false, false, 37), [($context["pageParam"] ?? null) => $context["page"]]);
-                echo "\">";
-                echo twig_escape_filter($this->env, $context["page"], "html", null, true);
-                echo "</a>
-            </li>
-        ";
-            }
-            $_parent = $context['_parent'];
-            unset($context['_seq'], $context['_iterated'], $context['_key'], $context['page'], $context['_parent'], $context['loop']);
-            $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 40
-            echo "
-        ";
-            // line 41
-            if ((twig_get_attribute($this->env, $this->source, ($context["records"] ?? null), "lastPage", [], "any", false, false, false, 41) > twig_get_attribute($this->env, $this->source, ($context["records"] ?? null), "currentPage", [], "any", false, false, false, 41))) {
-                // line 42
-                echo "            <li><a href=\"";
-                echo $this->extensions['Cms\Twig\Extension']->pageFilter(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["this"] ?? null), "page", [], "any", false, false, false, 42), "baseFileName", [], "any", false, false, false, 42), [($context["pageParam"] ?? null) => (twig_get_attribute($this->env, $this->source, ($context["records"] ?? null), "currentPage", [], "any", false, false, false, 42) + 1)]);
-                echo "\">Next &rarr;</a></li>
-        ";
-            }
-            // line 44
-            echo "    </ul>
-";
-        }
+        // line 48
+        echo "  </div>
+</section>";
     }
 
     public function getTemplateName()
@@ -168,7 +132,7 @@ class __TwigTemplate_18b97e0cc818bbc3c41cb48bae0f172d3b07fbd4624d8f03a1ba9f2a307
 
     public function getDebugInfo()
     {
-        return array (  154 => 44,  148 => 42,  146 => 41,  143 => 40,  132 => 37,  127 => 36,  123 => 35,  120 => 34,  114 => 32,  112 => 31,  109 => 30,  107 => 29,  103 => 27,  94 => 25,  88 => 23,  85 => 22,  81 => 20,  79 => 19,  74 => 17,  71 => 16,  65 => 14,  62 => 13,  59 => 12,  56 => 10,  51 => 9,  47 => 7,  45 => 6,  43 => 5,  41 => 4,  39 => 3,  37 => 2,  35 => 1,);
+        return array (  119 => 48,  112 => 46,  108 => 44,  106 => 43,  97 => 37,  93 => 36,  86 => 32,  82 => 30,  76 => 28,  74 => 27,  70 => 25,  66 => 24,  47 => 7,  45 => 6,  43 => 5,  41 => 4,  39 => 3,  37 => 2,  35 => 1,);
     }
 
     public function getSourceContext()
@@ -180,43 +144,47 @@ class __TwigTemplate_18b97e0cc818bbc3c41cb48bae0f172d3b07fbd4624d8f03a1ba9f2a307
 {% set detailsKeyColumn = builderList.detailsKeyColumn %}
 {% set detailsUrlParameter = builderList.detailsUrlParameter %}
 
-<ul class=\"record-list\">
+<section id=\"about\" class=\"about-section text-center\">
+  <div class=\"container\">
+    <div class=\"row\">
+      <div class=\"col-lg-8 mx-auto\">
+        <h2 class=\"text-white mb-4\">Products</h2>
+        <p class=\"text-white-50\">The world’s first GPS solar watch. By connecting to the GPS network, the Astron adjusts
+          at the touch of a button to your time zone and, by taking all the energy it
+          needs from light alone, never needs a battery change.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id=\"projects\" class=\"projects-section bg-light\">
+  <div class=\"container\">
+    
     {% for record in records %}
-        <li>
-            {# Use spaceless tag to remove spaces inside the A tag. #}
-            {% spaceless %}
-                {% if detailsPage %}
-                    <a href=\"{{ detailsPage|page({ (detailsUrlParameter): attribute(record, detailsKeyColumn) }) }}\">
-                {% endif %}
 
-                {{ attribute(record, displayColumn) }}
+    <!-- Include an referenced anchor tag if available -->
+    {% if detailsPage %}
+      <a href=\"{{ detailsPage|page( {(detailsUrlParameter): attribute(record, detailsKeyColumn)} ) }}\">
+    {% endif %}
+    <div class=\"row align-items-center no-gutters mb-4 mb-lg-5\" data-aos=\"zoom-in-up\" data-aos-duration=\"1500\">
+      <div class=\"col-xl-8 col-lg-7\">
+        <img class=\"img-fluid mb-3 mb-lg-0\" src=\"{{ record.watchPic.path }}\" alt=\"\">
+      </div>
+      <div class=\"col-xl-4 col-lg-5\">
+        <div class=\"featured-text text-center text-lg-left\">
+          <h4>{{ record.watch_name }}</h4>
+          <p class=\"text-black-50 mb-0\">{{ record.watch_description }}</p>
+        </div>
+      </div>
+      
+    </div>
 
-                {% if detailsPage %}
-                    </a>
-                {% endif %}
-            {% endspaceless %}
-        </li>
-    {% else %}
-        <li class=\"no-data\">{{ noRecordsMessage }}</li>
+    {% if detailsPage %}
+        </a>
+    {% endif %}
+
     {% endfor %}
-</ul>
-
-{% if records.lastPage > 1 %}
-    <ul class=\"pagination\">
-        {% if records.currentPage > 1 %}
-            <li><a href=\"{{ this.page.baseFileName|page({ (pageParam): (records.currentPage-1) }) }}\">&larr; Prev</a></li>
-        {% endif %}
-
-        {% for page in 1..records.lastPage %}
-            <li class=\"{{ records.currentPage == page ? 'active' : null }}\">
-                <a href=\"{{ this.page.baseFileName|page({ (pageParam): page }) }}\">{{ page }}</a>
-            </li>
-        {% endfor %}
-
-        {% if records.lastPage > records.currentPage %}
-            <li><a href=\"{{ this.page.baseFileName|page({ (pageParam): (records.currentPage+1) }) }}\">Next &rarr;</a></li>
-        {% endif %}
-    </ul>
-{% endif %}", "C:\\xampp\\htdocs\\october_test/themes/grey/pages/watch.htm", "");
+  </div>
+</section>", "C:\\xampp\\htdocs\\october_test/themes/grey/pages/watch.htm", "");
     }
 }

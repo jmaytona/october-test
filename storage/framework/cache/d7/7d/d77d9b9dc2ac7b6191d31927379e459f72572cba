@@ -1,4 +1,4 @@
-1558622301a:1:{s:8:"home.htm";a:10:{s:8:"fileName";s:8:"home.htm";s:7:"content";s:7597:"title = "Home"
+1559028211a:1:{s:8:"home.htm";a:10:{s:8:"fileName";s:8:"home.htm";s:7:"content";s:7565:"title = "Home"
 url = "/"
 layout = "default"
 is_hidden = 0
@@ -24,9 +24,7 @@ pageNumber = "{{ :page }}"
   <header class="masthead">
     <div class="container d-flex h-100 align-items-center">
       <div class="mx-auto text-center">
-        <h1 class="mx-auto my-0 text-uppercase">Grayscale</h1>
-        <h2 class="text-white-50 mx-auto mt-2 mb-5">A free, responsive, one page Bootstrap theme created by Start Bootstrap.</h2>
-        <a href="#about" class="btn btn-primary js-scroll-trigger">Get Started</a>
+        <a href="#about" class="btn btn-primary js-scroll-trigger" style="margin-top:300px">Latest Model</a>
       </div>
     </div>
   </header>
@@ -36,12 +34,14 @@ pageNumber = "{{ :page }}"
     <div class="container">
       <div class="row">
         <div class="col-lg-8 mx-auto">
-          <h2 class="text-white mb-4">Built with Bootstrap 4</h2>
-          <p class="text-white-50">Grayscale is a free Bootstrap theme created by Start Bootstrap. It can be yours right now, simply download the template on
-            <a href="http://startbootstrap.com/template-overviews/grayscale/">the preview page</a>. The theme is open source, and you can use it for any purpose, personal or commercial.</p>
+          <h2 class="text-white mb-4">Astron 5x Series</h2>
+          <p class="text-white-50">The world’s first GPS solar watch. By connecting to the GPS network, the Astron adjusts at the touch of a button to your time zone and, by taking all the energy it 
+            needs from light alone, never needs a battery change.</p>
         </div>
       </div>
-      <img src="{{ 'assets/img/ipad.png'|theme }}" class="img-fluid" alt="">
+      <div data-aos="zoom-in-up" data-aos-duration="2000">
+        <img src="{{ 'assets/img/watch3.jpg'|theme }}" class="img-fluid" alt="" >
+      </div>
     </div>
   </section>
 
@@ -65,7 +65,7 @@ pageNumber = "{{ :page }}"
       <!-- Featured Project Row -->
       {% for record in records %}
       {% if record.featured == 1 %}
-      <div class="row align-items-center no-gutters mb-4 mb-lg-5">
+      <div class="row align-items-center no-gutters mb-4 mb-lg-5" data-aos="zoom-in-up" data-aos-duration="1500">
           <div class="col-xl-8 col-lg-7">
             <img class="img-fluid mb-3 mb-lg-0" src="{{ record.watchPic.path }}" alt="">
           </div>
@@ -83,10 +83,10 @@ pageNumber = "{{ :page }}"
       {% for record in records %}
       {% if record.featured == 0 %}
       <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
-        <div class="col-lg-6">
+        <div class="col-lg-6" data-aos="fade-right" data-aos-duration="1500">
           <img class="img-fluid" src="{{ record.watchPic.path }}" alt="">
         </div>
-        <div class="col-lg-6">
+        <div class="col-lg-6" data-aos="fade-left" data-aos-duration="1500">
           <div class="bg-black text-center h-100 project">
             <div class="d-flex h-100">
               <div class="project-text w-100 my-auto text-center text-lg-left">
@@ -197,7 +197,7 @@ pageNumber = "{{ :page }}"
       </div>
 
     </div>
-  </section>";s:5:"mtime";i:1558621698;s:6:"markup";s:7290:"{% set records = builderList.records %}
+  </section>";s:5:"mtime";i:1558973676;s:6:"markup";s:7258:"{% set records = builderList.records %}
 {% set displayColumn = builderList.displayColumn %}
 {% set noRecordsMessage = builderList.noRecordsMessage %}
 {% set detailsPage = builderList.detailsPage %}
@@ -208,9 +208,7 @@ pageNumber = "{{ :page }}"
   <header class="masthead">
     <div class="container d-flex h-100 align-items-center">
       <div class="mx-auto text-center">
-        <h1 class="mx-auto my-0 text-uppercase">Grayscale</h1>
-        <h2 class="text-white-50 mx-auto mt-2 mb-5">A free, responsive, one page Bootstrap theme created by Start Bootstrap.</h2>
-        <a href="#about" class="btn btn-primary js-scroll-trigger">Get Started</a>
+        <a href="#about" class="btn btn-primary js-scroll-trigger" style="margin-top:300px">Latest Model</a>
       </div>
     </div>
   </header>
@@ -220,12 +218,14 @@ pageNumber = "{{ :page }}"
     <div class="container">
       <div class="row">
         <div class="col-lg-8 mx-auto">
-          <h2 class="text-white mb-4">Built with Bootstrap 4</h2>
-          <p class="text-white-50">Grayscale is a free Bootstrap theme created by Start Bootstrap. It can be yours right now, simply download the template on
-            <a href="http://startbootstrap.com/template-overviews/grayscale/">the preview page</a>. The theme is open source, and you can use it for any purpose, personal or commercial.</p>
+          <h2 class="text-white mb-4">Astron 5x Series</h2>
+          <p class="text-white-50">The world’s first GPS solar watch. By connecting to the GPS network, the Astron adjusts at the touch of a button to your time zone and, by taking all the energy it 
+            needs from light alone, never needs a battery change.</p>
         </div>
       </div>
-      <img src="{{ 'assets/img/ipad.png'|theme }}" class="img-fluid" alt="">
+      <div data-aos="zoom-in-up" data-aos-duration="2000">
+        <img src="{{ 'assets/img/watch3.jpg'|theme }}" class="img-fluid" alt="" >
+      </div>
     </div>
   </section>
 
@@ -249,7 +249,7 @@ pageNumber = "{{ :page }}"
       <!-- Featured Project Row -->
       {% for record in records %}
       {% if record.featured == 1 %}
-      <div class="row align-items-center no-gutters mb-4 mb-lg-5">
+      <div class="row align-items-center no-gutters mb-4 mb-lg-5" data-aos="zoom-in-up" data-aos-duration="1500">
           <div class="col-xl-8 col-lg-7">
             <img class="img-fluid mb-3 mb-lg-0" src="{{ record.watchPic.path }}" alt="">
           </div>
@@ -267,10 +267,10 @@ pageNumber = "{{ :page }}"
       {% for record in records %}
       {% if record.featured == 0 %}
       <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
-        <div class="col-lg-6">
+        <div class="col-lg-6" data-aos="fade-right" data-aos-duration="1500">
           <img class="img-fluid" src="{{ record.watchPic.path }}" alt="">
         </div>
-        <div class="col-lg-6">
+        <div class="col-lg-6" data-aos="fade-left" data-aos-duration="1500">
           <div class="bg-black text-center h-100 project">
             <div class="d-flex h-100">
               <div class="project-text w-100 my-auto text-center text-lg-left">

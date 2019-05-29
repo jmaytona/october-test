@@ -38,3 +38,10 @@ fields:
         span: auto
         hidden: 0
         type: fileupload
+    slug:
+        label: Slug
+        span: auto
+        preset:
+            field: watch_name
+            type: slug
+        type: text
